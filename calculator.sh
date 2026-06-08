@@ -15,7 +15,7 @@ read -p "Enter a number: " num_1
 read -p "Enter another number: " num_2
 echo ""
 add=$(($num_1 + $num_2))
-echo "The addition of $mum_1 and $num_2 is $add"
+echo "The addition of $num_1 and $num_2 is $add"
 echo ""
 }
 
@@ -25,7 +25,7 @@ read -p "Enter a number: " num_1
 read -p "Enter another number: " num_2
 echo ""
 subtract=$(($num_1 - $num_2))
-echo "The subtraction of $num_1 and $num_2 is is $subtract"
+echo "The subtraction of $num_1 and $num_2 is $subtract"
 echo ""
 }
 
@@ -44,9 +44,16 @@ echo ""
 read -p "Enter a number: " num_1
 read -p "Enter another number: " num_2
 echo ""
+
+if [ $num_2 -eq 0 ]
+then
+echo "Cannot divide by zero!"
+echo ""
+else
 divide=$(($num_1 / $num_2))
 echo "The division of $num_1 and $num_2 is $divide"
 echo ""
+fi
 }
 
 while true
